@@ -5,52 +5,71 @@
     <title>Jorvik Legacy</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            /* Halvány rózsaszín háttér az egész oldalnak */
+            background-color: #fff0f5; 
+            margin: 0;
+            padding: 20px;
         }
 
         .fo-cim {
-            margin-top: 50px;
-            font-size: 32px;
+            margin: 40px 0;
+            font-size: 36px;
             font-weight: bold;
+            color: #d81b60; /* Sötétebb rózsaszín szöveg */
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .kontener {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 50px;
-            flex-wrap: wrap; /* Mobilbarát: ha nem fér ki, egymás alá ugrik */
+            flex-direction: column; /* Egymás alatt legyenek a nagy téglalapok */
+            align-items: center;
+            gap: 25px;
         }
 
         .menu-kartya {
-            width: 250px;
-            height: 250px;
-            border: 3px solid #333;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; /* Ez teszi egymás mellé a szöveget és a képet */
+            width: 80%;
+            max-width: 600px;
+            height: 150px;
+            background-color: #ff69b4; /* Élénk rózsaszín gomb háttér */
+            border: 4px solid #c71585; /* Erősebb keret */
+            border-radius: 20px;
+            overflow: hidden; /* Hogy a kép ne lógjon ki a lekerekített saroknál */
             text-decoration: none;
             color: white;
-            font-size: 24px;
-            font-weight: bold;
-            background-size: cover;
-            background-position: center;
-            transition: transform 0.3s;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Olvashatóbb szöveg a képen */
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .menu-kartya:hover {
-            transform: scale(1.05); /* Kicsit megnő, ha ráviszed az egeret */
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
-        /* Itt adhatod meg a képeket */
-        .hirek { background-image: url('hirek.jpg'); background-color: #555; }
-        .segitseg { background-image: url('segitseg.jpg'); background-color: #777; }
-        .media { background-image: url('media.jpg'); background-color: #999; }
+        .szoveg-resz {
+            flex: 1; /* Elfoglalja a maradék helyet bal oldalt */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .kep-resz {
+            width: 40%; /* A jobb oldal 40%-a lesz a kép */
+            background-size: cover;
+            background-position: center;
+            border-left: 4px solid #c71585; /* Választóvonal a szöveg és kép között */
+        }
+
+        /* Itt kapcsoljuk össze a képeket a kártyákkal */
+        .hirek-kep { background-image: url('hirek.jpg'); }
+        .segitseg-kep { background-image: url('segitseg.jpg'); }
+        .media-kep { background-image: url('media.jpg'); }
     </style>
 </head>
 <body>
@@ -58,9 +77,20 @@
     <div class="fo-cim">OLDAL NEVE</div>
 
     <div class="kontener">
-        <a href="hirek.html" class="menu-kartya hirek">HÍREK</a>
-        <a href="segitseg.html" class="menu-kartya segitseg">SEGÍTSÉG</a>
-        <a href="media.html" class="menu-kartya media">MÉDIA</a>
+        <a href="hirek.html" class="menu-kartya">
+            <div class="szoveg-resz">HÍREK</div>
+            <div class="kep-resz hirek-kep"></div>
+        </a>
+
+        <a href="segitseg.html" class="menu-kartya">
+            <div class="szoveg-resz">SEGÍTSÉG</div>
+            <div class="kep-resz segitseg-kep"></div>
+        </a>
+
+        <a href="media.html" class="menu-kartya">
+            <div class="szoveg-resz">MÉDIA</div>
+            <div class="kep-resz media-kep"></div>
+        </a>
     </div>
 
 </body>
