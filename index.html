@@ -7,7 +7,6 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            /* Halvány rózsaszín háttér az egész oldalnak */
             background-color: #fff0f5; 
             margin: 0;
             padding: 20px;
@@ -17,27 +16,27 @@
             margin: 40px 0;
             font-size: 36px;
             font-weight: bold;
-            color: #d81b60; /* Sötétebb rózsaszín szöveg */
+            color: #d81b60;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
         .kontener {
             display: flex;
-            flex-direction: column; /* Egymás alatt legyenek a nagy téglalapok */
+            flex-direction: column;
             align-items: center;
             gap: 25px;
         }
 
         .menu-kartya {
-            display: flex; /* Ez teszi egymás mellé a szöveget és a képet */
+            display: flex;
             width: 80%;
             max-width: 600px;
             height: 150px;
-            background-color: #ff69b4; /* Élénk rózsaszín gomb háttér */
-            border: 4px solid #c71585; /* Erősebb keret */
+            background-color: #ff69b4;
+            border: 4px solid #c71585;
             border-radius: 20px;
-            overflow: hidden; /* Hogy a kép ne lógjon ki a lekerekített saroknál */
+            overflow: hidden;
             text-decoration: none;
             color: white;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -50,7 +49,7 @@
         }
 
         .szoveg-resz {
-            flex: 1; /* Elfoglalja a maradék helyet bal oldalt */
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,13 +62,15 @@
             width: 40%; /* A jobb oldal 40%-a lesz a kép */
             background-size: cover;
             background-position: center;
-            border-left: 4px solid #c71585; /* Választóvonal a szöveg és kép között */
+            background-repeat: no-repeat;
+            border-left: 4px solid #c71585;
         }
 
-        /* Itt kapcsoljuk össze a képeket a kártyákkal */
         .hirek-kep { background-image: url('hirek.png'); }
+            background-position: center;
         .segitseg-kep { background-image: url('segitseg.png'); }
-        .media-kep { background-image: url('media.png'); }
+            background-position: 20% center;
+        .media-kep { background-image: url('media.png'); }   
     </style>
 </head>
 <body>
