@@ -1,20 +1,67 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <title>Játék archívum</title>
+    <meta charset="UTF-8">
+    <title>Jorvik Legacy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        .fo-cim {
+            margin-top: 50px;
+            font-size: 32px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .kontener {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+            flex-wrap: wrap; /* Mobilbarát: ha nem fér ki, egymás alá ugrik */
+        }
+
+        .menu-kartya {
+            width: 250px;
+            height: 250px;
+            border: 3px solid #333;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.3s;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8); /* Olvashatóbb szöveg a képen */
+        }
+
+        .menu-kartya:hover {
+            transform: scale(1.05); /* Kicsit megnő, ha ráviszed az egeret */
+        }
+
+        /* Itt adhatod meg a képeket */
+        .hirek { background-image: url('hirek.jpg'); background-color: #555; }
+        .segitseg { background-image: url('segitseg.jpg'); background-color: #777; }
+        .media { background-image: url('media.jpg'); background-color: #999; }
+    </style>
 </head>
 <body>
-  <h1>Játék archívum</h1>
-  <p>
-    Ez az oldal a kedvenc játékom elveszett, nehezen elérhető
-    és máshol nem dokumentált tartalmait gyűjti össze.
-  </p>
 
-  <ul>
-    <li><a href="hirek.html">Hírek</a></li>
-    <li><a href="segitseg.html">Segítség</a></li>
-    <li><a href="media.html">Média</a></li>
-  </ul>
+    <div class="fo-cim">OLDAL NEVE</div>
+
+    <div class="kontener">
+        <a href="hirek.html" class="menu-kartya hirek">HÍREK</a>
+        <a href="segitseg.html" class="menu-kartya segitseg">SEGÍTSÉG</a>
+        <a href="media.html" class="menu-kartya media">MÉDIA</a>
+    </div>
+
 </body>
 </html>
