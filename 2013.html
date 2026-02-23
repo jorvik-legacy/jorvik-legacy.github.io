@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>2013 - Jorvik Legacy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .fo-cim {
+            margin: 40px 0;
+            font-size: 32px;
+            font-weight: bold;
+            color: #d81b60;
+            text-transform: uppercase;
+        }
+
+        .vissza-gomb {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #c71585;
+            font-weight: bold;
+        }
+
+        .racs-kontener {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .honap-kartya {
+            height: 80px;
+            background-color: #ff69b4;
+            border: 3px solid #c71585;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .honap-kartya:hover {
+            transform: scale(1.05);
+            background-color: #ff1493;
+        }
+
+  .inaktiv {
+    background-color: #cccccc !important;
+    border-color: #999999 !important;
+    color: #666666 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+} 
+        
+    </style>
+</head>
+<body>
+
+    <a href="hirek.html" class="vissza-gomb">← Vissza az évekhez</a>
+    <div class="fo-cim">2013 HÓNAPJAI</div>
+
+    <div class="racs-kontener">
+        <a href="2013/januar.html" class="honap-kartya">FEBRUÁR</a>
+        <a href="#" class="honap-kartya inaktiv">FEBRUÁR</a>
+        <a href="#" class="honap-kartya inaktiv">MÁRCIUS</a>
+        <a href="#" class="honap-kartya inaktiv">ÁPRILIS</a>
+        <a href="#" class="honap-kartya inaktiv">MÁJUS</a>
+        <a href="#" class="honap-kartya inaktiv">JÚNIUS</a>
+        <a href="#" class="honap-kartya inaktiv">JÚLIUS</a>
+        <a href="#" class="honap-kartya inaktiv">AUGUSZTUS</a>
+        <a href="#" class="honap-kartya inaktiv">SZEPTEMBER</a>
+        <a href="#" class="honap-kartya inaktiv">OKTÓBER</a>
+        <a href="#" class="honap-kartya">NOVEMBER</a>
+        <a href="#" class="honap-kartya inaktiv">DECEMBER</a>
+    </div>
+
+</body>
+</html>
