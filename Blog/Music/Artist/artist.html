@@ -39,28 +39,32 @@
         }
 
         .racs-kontener {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, 190px); 
+                    gap: 15px;
+                    max-width: 1000px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    justify-content: center;
+                }
+        
+                .honap-kartya {
 
-        .honap-kartya {
-            height: 80px;
-            background-color: #ff69b4;
-            border: 3px solid #c71585;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
+                    height: 70px; 
+                    width: 190px;
+                    background-color: #ff69b4;
+                    border: 3px solid #c71585;
+                    border-radius: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-decoration: none;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: bold;
+                    transition: transform 0.2s;
+                    white-space: nowrap; 
+                }
 
         .honap-kartya:hover {
             transform: scale(1.05);
