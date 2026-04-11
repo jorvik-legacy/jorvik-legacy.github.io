@@ -1,97 +1,132 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-                <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9WGG42XM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P9WGG42XM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3P9WGG42XM');
+    </script>
 
-  gtag('config', 'G-3P9WGG42XM');
-</script>
-    
     <meta charset="UTF-8">
     <title>Blog - Jorvik Legacy</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #fff0f5;
+            background-color: #fff0f5; 
             margin: 0;
             padding: 20px;
         }
 
         .fo-cim {
             margin: 40px 0;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: bold;
             color: #d81b60;
             text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .vissza-gomb {
+        .vissza-link {
             display: inline-block;
             margin-bottom: 20px;
             text-decoration: none;
             color: #c71585;
             font-weight: bold;
+            font-size: 18px;
         }
 
-        .racs-kontener {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 15px;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+        .kontener {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
         }
 
-        .ev-kartya {
-            height: 100px;
+        .menu-kartya {
+            display: flex;
+            width: 80%;
+            max-width: 600px;
+            height: 120px; /* Kicsit alacsonyabb, hogy az 5 gomb elférjen */
             background-color: #ff69b4;
-            border: 3px solid #c71585; 
-            border-radius: 15px;
+            border: 4px solid #c71585;
+            border-radius: 20px;
+            overflow: hidden;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .menu-kartya:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .szoveg-resz {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            color: white;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
-            transition: transform 0.2s, background-color 0.2s;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            text-transform: uppercase;
         }
 
-        .ev-kartya:hover {
-            transform: scale(1.1);
-            background-color: #ff1493;
+        .kep-resz {
+            width: 40%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-left: 4px solid #c71585;
+            background-color: white; /* Hogy a logók jobban látsszanak */
         }
 
+        /* Inaktív gomb stílusa */
         .inaktiv {
-            background-color: #e0e0e0 !important;
-            border-color: #bdbdbd !important; 
-            color: #9e9e9e !important;
-            cursor: not-allowed; 
-            pointer-events: none;
-            filter: grayscale(100%);
+            background-color: #bbbbbb !important;
+            border-color: #888888 !important;
+            cursor: not-allowed;
             opacity: 0.7;
         }
+        .inaktiv .szoveg-resz { text-shadow: none; }
+        .inaktiv .kep-resz { border-left-color: #888888; filter: grayscale(100%); }
+
     </style>
 </head>
 <body>
 
-    <a href="index.html" class="vissza-gomb">← Vissza a főoldalra</a>
+    <a href="index.html" class="vissza-link">← VISSZA A FŐOLDALRA</a>
     <div class="fo-cim">SSE BLOG ARCHÍVUM</div>
 
-    <div class="kategoria-lista">
-        <a href="#" class="kategoria-gomb inaktiv">BOOKS</a>
-        <a href="#" class="kategoria-gomb inaktiv">GAMEBLOG</a>
-        <a href="#" class="kategoria-gomb inaktiv">GAMEBLOG</a>
-        <a href="#" class="kategoria-gomb inaktiv">GAMEBLOG</a>
-        <a href="#" class="kategoria-gomb inaktiv">MISTFALL - SERIES</a>
-        <a href="#" class="kategoria-gomb inaktiv">MUSIC</a>
-        <a href="#" class="kategoria-gomb inaktiv">SSE BLOG</a>
+    <div class="kontener">
+        <a href="#" class="menu-kartya inaktiv">
+            <div class="szoveg-resz">Books</div>
+            <div class="kep-resz" style="background-image: url('Blog/books_logo.png'); background-size: 50%;"></div>
+        </a>
+
+        <a href="#" class="menu-kartya inaktiv">
+            <div class="szoveg-resz">Gameblog</div>
+            <div class="kep-resz" style="background-image: url('Blog/game_logo.png'); background-size: 50%;"></div>
+        </a>
+
+        <a href="#" class="menu-kartya inaktiv">
+            <div class="szoveg-resz">Mistfall - Series</div>
+            <div class="kep-resz" style="background-image: url('Blog/mistfall_logo.png'); background-size: 50%;"></div>
+        </a>
+
+        <a href="#" class="menu-kartya inaktiv">
+            <div class="szoveg-resz">Music</div>
+            <div class="kep-resz" style="background-image: url('Blog/music_logo.png'); background-size: 50%;"></div>
+        </a>
+
+        <a href="#" class="menu-kartya inaktiv">
+            <div class="szoveg-resz">SSE Blog</div>
+            <div class="kep-resz" style="background-image: url('Blog/sse_logo.png'); background-size: 50%;"></div>
+        </a>
     </div>
 
 </body>
