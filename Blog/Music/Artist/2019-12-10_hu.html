@@ -128,41 +128,45 @@ figcaption {
           }
 
               .zene-lista-doboz {
-            background-color: #fce4ec;
-            border-radius: 15px;
-            padding: 20px;
-            display: inline-block;
-            text-align: left;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin: 20px auto;
+            /* 1. JAVÍTVA: A háttérszín most a szegély színének egy nagyon halvány, passzoló változata */
+            background-color: #fdf2f7; 
+            border-radius: 15px;       
+            padding: 20px;             
+            display: inline-block;     
+            text-align: left;          
+            margin: 20px 0;            
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            border: 1px solid #fdf2f7; /* Hogy szép, éles legyen a széle */
         }
-        
+
         .zene-lista-doboz h3 {
             margin-top: 0;
-            color: #5d4037;
-            font-size: 22px;
+            margin-bottom: 15px;
+            color: #d81b60;           
+            font-size: 20px;
+            font-weight: bold;
         }
-        
+
         .zene-lista-doboz ul {
-            list-style-type: none;
+            list-style-type: none;     
             padding: 0;
             margin: 0;
         }
-        
+
         .zene-lista-doboz li {
             padding: 5px 0;
             font-style: italic;
-            color: #4e342e;
-            font-size: 18px;
+            color: #333333;
+            font-size: 17px;
         }
-        
+
         .zene-lista-doboz span {
             font-style: normal;
-            color: #888888;
-            margin-left: 5px;
+            color: #999999;            
+            margin-left: 8px;
+            font-size: 15px;
         }
-      
+              
     </style>
 </head>
 <body>
